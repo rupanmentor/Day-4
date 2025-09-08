@@ -92,3 +92,85 @@ const odd = (arr) => {
     return result
 }
 console.log(odd([1,2,3,4,5,6,7,8,9,10]));
+
+//HOISTING
+
+//Example with variable hoisting
+
+
+console.log(x);
+var x = 5;
+
+
+// Example with function hoisting
+
+
+display();
+
+function display() {
+    console.log("Hello world");
+}
+
+
+// SCOPING
+
+//Global
+
+
+var global = "Iam global"
+
+function myfunc(a)
+{
+    var local = "Iam local"
+    console.log(global);
+    console.log(local);
+    console.log(a)
+}
+myfunc(10);
+console.log(global);
+console.log(local);
+
+
+//Block Scope
+
+if(true){
+    let block = "Iam Block scoped";
+    console.log(block);
+    
+}
+console.log(block);
+
+
+// Looping
+//While Loop
+// Syntax
+
+while (condition)
+{
+   // block of code
+}
+
+Example
+
+let count =0;
+while (count < 5)
+{
+    console.log("Count is:"+count);
+    count++;
+}
+
+
+// Do While Loop
+// Syntax
+do{
+   // block of code
+} while (condition)
+
+Example
+
+let count =6;
+do
+{
+    console.log("Count is:"+count);
+    count++;
+} while (count < 5 )
