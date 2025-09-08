@@ -36,3 +36,59 @@ console.log(multiply(5,3));
 })();
 
 
+//Function types example
+//Question : print odd numbers in an array [1,2,3,4,5,6,7,8,9,10]
+
+//1. Normal function
+
+var result = []
+function odd (arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+console.log(odd([1,2,3,4,5,6,7,8,9,10]));
+
+// 2. Anonymous Function
+
+var result = []
+var odd = function (arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+console.log(odd([1,2,3,4,5,6,7,8,9,10]));
+
+
+// 3. IIFE
+
+
+var result = [];
+(function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      result.push(arr[i]);
+    }
+  }
+  console.log(result);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+
+// 4. Arrow Function
+
+var result = []
+const odd = (arr) => {
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2!==0){
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+console.log(odd([1,2,3,4,5,6,7,8,9,10]));
