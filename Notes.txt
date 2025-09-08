@@ -1,0 +1,38 @@
+//Function Types
+
+//1. Normal Function
+
+function add(a,b){
+   return a+b;
+}
+console.log(add(5,3));
+
+//2. Anonymous Function || Function Expression
+const subtract = function (a,b){
+    return a-b;
+}
+console.log(subtract(5,3))
+
+//2a. Anonymous Function 
+
+setTimeout(function(){
+    console.log("This runs after 5 seconds");
+},5000)
+
+//3. Arrow Function (ES6)
+syntax:- 
+const functionName = (parameters) => {
+    // code to be executed
+    }
+
+const multiply = (a,b) => a*b
+
+console.log(multiply(5,3));
+
+//4. IIFE (Immediately Invoked Function Expression)
+
+(function (){
+    console.log("This function runs immediately");
+})();
+
+
